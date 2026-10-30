@@ -1,7 +1,7 @@
 // Dhaara offline cache. The page is fetched fresh when online (so updates arrive)
 // and served from the cache when offline. Bump CACHE when the asset list changes.
-const CACHE = 'dhaara-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './icons/apple-touch-icon.png', './icons/icon-192.png', './icons/icon-512.png', './icons/favicon-64.png'];
+const CACHE = 'dhaara-v2';
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './apple-touch-icon.png', './icons/favicon-64.png', './icons/logo-120.jpg'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
